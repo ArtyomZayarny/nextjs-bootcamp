@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #fff;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: bold;

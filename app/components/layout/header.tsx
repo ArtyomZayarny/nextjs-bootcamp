@@ -1,5 +1,6 @@
-import Link from 'next/link'
 import React from 'react'
+import NavLink from '../ui/NavLink'
+import ContactButton from '../ui/ContactButton'
 
 function Header() {
   return (
@@ -7,11 +8,12 @@ function Header() {
       <nav className='container'>
         <ul className='flex gap-3'>
           <li>
-            <Link href='/'>Home</Link>
+            <NavLink href='/'>Home</NavLink>
           </li>
           <li>
-            <Link href='/about'>About</Link>
+            <NavLink href='/about'>About</NavLink>
           </li>
+          <ContactButton />
         </ul>
       </nav>
     </header>
