@@ -30,5 +30,18 @@ export const getPostBySlug = async (slug: string) => {
     }
   })
 
-  return { content, frontmatter }
+  return { content, frontmatter, slug: realSlug }
+}
+
+export const getAllPosts = async () => {
+  const files = fs.readdirSync(path.join(rootDirectory))
+
+  let posts = []
+
+  for (const file of files) {
+    const post = await getPostBySlug(file)
+    posts.push(post)
+  }
+
+  return posts
 }
