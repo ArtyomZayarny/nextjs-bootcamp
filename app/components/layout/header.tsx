@@ -13,7 +13,10 @@ function Header() {
           <li>
             <NavLink href='/about'>About</NavLink>
           </li>
-          <ContactButton />
+          <li>
+            <NavLink href='/posts'>Blog</NavLink>
+          </li>
+          {/* <ContactButton /> */}
         </ul>
       </nav>
     </header>

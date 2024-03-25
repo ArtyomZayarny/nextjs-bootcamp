@@ -30,6 +30,8 @@ export const getPostBySlug = async (slug: string) => {
     }
   })
 
+  await wait(2000)
+
   return { content, frontmatter, slug: realSlug }
 }
 
@@ -43,5 +45,10 @@ export const getAllPosts = async () => {
     posts.push(post)
   }
 
+  await wait(2000)
+
   return posts
 }
+
+export const wait = async ms =>
+  new Promise((resolve, reject) => setTimeout(resolve, ms))
