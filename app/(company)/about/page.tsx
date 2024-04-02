@@ -13,7 +13,7 @@ async function getData() {
 }
 
 async function About() {
-  await getData()
+  // await getData()
   return <div>About</div>
 }
 
