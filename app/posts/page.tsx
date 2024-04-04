@@ -7,7 +7,7 @@ const Page = async () => {
   return (
     <section className='py-24'>
       <div className='container'>
-        <h1 className='text-3xk font-bold'>All blog posts</h1>
+        <h1 className='text-3xl font-bold'>All blog posts</h1>
 
         <ul className='mt-12'>
           {posts.map(post => (

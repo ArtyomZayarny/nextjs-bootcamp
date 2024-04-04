@@ -24,7 +24,7 @@ function ThemeButton() {
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
       {resolvedTheme === 'dark' ? (
-        <SunIcon className='test-orange-300 h-6 w-6' />
+        <SunIcon className='h-6 w-6 text-orange-300' />
       ) : (
         <MoonIcon className='h-6 w-6 text-slate-800' />
       )}
