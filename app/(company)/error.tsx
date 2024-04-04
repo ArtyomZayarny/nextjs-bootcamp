@@ -2,7 +2,10 @@
 
 import { useEffect } from 'react'
 
-const Error = ({ error, reset }) => {
+type Props = {
+  error: any
+}
+const Error = ({ error }: Props) => {
   useEffect(() => {
     console.log(error)
   })

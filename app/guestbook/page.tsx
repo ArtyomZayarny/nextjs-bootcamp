@@ -1,4 +1,7 @@
 import { getGuestBookEntries } from '@/lib/mongo/guestbook'
+import { GuestBookForm } from '../components/ui/GuestBookForm'
+
+export const dynamic = 'force-dynamic'
 
 async function getData() {
   const { entries, error } = await getGuestBookEntries()
@@ -8,14 +11,14 @@ async function getData() {
 
 const Page = async () => {
   //fetch previous entries
-
   const entries = await getData()
   return (
     <section className='py-24'>
       <div className='container'>
-        <h1 className='text-3xl font-bold'>Guestbook</h1>
+        <h1 className='mb-8 text-3xl font-bold'>Guestbook</h1>
+        <GuestBookForm />
         <ul className='mt-8 flex flex-col gap-y-2'>
-          {entries.map(entry => (
+          {entries.map((entry: any) => (
             <li key={entry._id} className='flex gap-x-3'>
               <span className='text-gray-500'>{entry.name}</span>
               <span>{entry.message}</span>

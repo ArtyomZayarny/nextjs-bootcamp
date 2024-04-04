@@ -4,7 +4,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-function NavLink({ href, ...rest }) {
+type Props = {
+  href: string
+  children: React.ReactNode
+}
+
+function NavLink({ href, ...rest }: Props) {
   const pathName = usePathname()
 
   const isActive = href === pathName

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 import React from 'react'

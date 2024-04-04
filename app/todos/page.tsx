@@ -5,13 +5,13 @@ async function getTodos() {
   return res.json()
 }
 const Page = async () => {
-  const todos = await getTodos()
+  const todos: any = await getTodos()
   return (
     <section className='py-24'>
       <div className='container'>
         <h1 className='text-3xl font-bold'>Todos</h1>
         <ul className='mt-6 flex flex-col gap-3'>
-          {todos.slice(0, 10).map(todo => (
+          {todos.slice(0, 10).map((todo: any) => (
             <li key={todo.id}>{todo.title}</li>
           ))}
         </ul>

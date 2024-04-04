@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Pageviews from '@/app/components/ui/Pageviews'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 import React, { Suspense } from 'react'
