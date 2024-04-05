@@ -8,10 +8,13 @@ async function getData() {
   if (!entries || error) throw new Error('Failed to fetch entries')
   return entries
 }
+async function getMetadata() {
+  const { entries, error } = await getGuestBookEntries()
+}
 
 const Page = async () => {
-  //fetch previous entries
   const entries = await getData()
+  const metadata = await getMetadata()
   return (
     <section className='py-24'>
       <div className='container'>

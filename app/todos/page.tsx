@@ -4,6 +4,7 @@ async function getTodos() {
   if (!res.ok) throw new Error('Failed to fetch todos')
   return res.json()
 }
+
 const Page = async () => {
   const todos: any = await getTodos()
   return (
