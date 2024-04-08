@@ -4,8 +4,26 @@ import './globals.css'
 import Header from '@/app/components/layout/header'
 import Footer from '@/components/layout/footer'
 import Providers from './providers'
+import { Tauri } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const tauri = Tauri({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-tauri'
+})
+
+/*
+Font files can be colocated inside of 'app'
+import LocalFont from '<next />
+const localFont =  LocalFont({
+  src: './my-font.woff2,
+  display: 'swap'
+})
+*/
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className} suppressHydrationWarning>
+      <body
+        className={`${inter.className} ${tauri.variable}`}
+        suppressHydrationWarning
+      >
         <Providers>
           <Header />
           <main>{children}</main>

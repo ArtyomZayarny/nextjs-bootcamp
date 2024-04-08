@@ -16,6 +16,11 @@ const config: Config = {
         md: '1.5rem',
         lg: '2rem'
       }
+    },
+    extend: {
+      fontFamily: {
+        tauri: ['var(--font-tauri)']
+      }
     }
   },
   plugins: [require('@tailwindcss/typography')]
